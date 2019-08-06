@@ -3,6 +3,7 @@ const product = {
   name: 'product',
   namePlural: 'products',
   collectionPath: 'products',
+  route: 'products',
   idField: 'id',
   fields: {
     id: {

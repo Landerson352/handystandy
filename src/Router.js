@@ -22,7 +22,7 @@ const PrivateRoute = ({ component, ...options }) => {
 const Router = () => (
   <Switch>
     <Route path="/" exact component={HomePage} a={352} />
-    <PrivateRoute path="/products" render={(props) => <EntityList {...props} entityType={productEntityType} />} />
+    <PrivateRoute path={`/${productEntityType.route}`} render={(props) => <EntityList {...props} entityType={productEntityType} />} />
   </Switch>
 );
 
