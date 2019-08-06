@@ -9,6 +9,7 @@
     "react": "16.8.x",
     "react-dom": "16.8.x",
     "react-firebase-hooks": "^2.1.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.x"
   },
   "scripts": {

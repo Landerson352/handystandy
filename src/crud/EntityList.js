@@ -52,13 +52,9 @@ const EntityList = ({entityType}) => {
   return (
     <>
       <h2>{entityType.namePlural}</h2>
-      <Show iff={error}>
-        <strong>Error: {JSON.stringify(error)}</strong>
-      </Show>
-      <Show iff={loading}>
-        <span>Loading...</span>
-      </Show>
-      <Show iff={docs}>
+      {!!error && <strong>Error: {JSON.stringify(error)}</strong>}
+      {!!loading && <span>Loading...</span>}
+      {!!docs && (
         <table>
           <thead>
           <tr>
@@ -81,11 +77,9 @@ const EntityList = ({entityType}) => {
           ))}
           </tbody>
         </table>
-      </Show>
+      )}
     </>
   );
 };
-
-const Show = ({children, iff}) => !!iff && children;
 
 export default EntityList;
